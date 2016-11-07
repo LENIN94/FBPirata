@@ -7,3 +7,26 @@
 //
 
 import Foundation
+import UIKit
+class SexyTextField: UITextField{
+    
+    
+    
+    override func awakeFromNib() {
+        layer.borderColor = shadowColor.cgColor
+        layer.borderWidth = 1
+        layer.cornerRadius = 6
+        
+        
+       
+    }
+    
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.insetBy(dx: 5, dy: 5)
+    }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        
+        return bounds.insetBy(dx: 5, dy: 5)
+    }
+}

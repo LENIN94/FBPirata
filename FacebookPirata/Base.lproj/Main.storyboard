@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U9S-AB-NTf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FacebookPirata" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,143 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="city-background-4" translatesAutoresizingMaskIntoConstraints="NO" id="SpI-67-4Ce"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qQq-TW-UBb" customClass="LoginHeaderView" customModule="FacebookPirata" customModuleProvider="target">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="telemetria-telstock-logo" translatesAutoresizingMaskIntoConstraints="NO" id="1De-YK-0nx"/>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89411764705882346" green="0.81176470588235294" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="1De-YK-0nx" firstAttribute="top" secondItem="qQq-TW-UBb" secondAttribute="top" constant="41" id="0rG-gj-Tuj"/>
+                                    <constraint firstItem="1De-YK-0nx" firstAttribute="leading" secondItem="qQq-TW-UBb" secondAttribute="leading" constant="32" id="E8R-Ah-ASE"/>
+                                    <constraint firstAttribute="trailing" secondItem="1De-YK-0nx" secondAttribute="trailing" constant="33" id="Gna-Ci-Qxh"/>
+                                    <constraint firstAttribute="height" constant="160" id="fZq-cq-Ucl"/>
+                                    <constraint firstAttribute="bottom" secondItem="1De-YK-0nx" secondAttribute="bottom" constant="12" id="vCx-7b-GF4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueu-hv-QhA">
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Si no tienes un usuario creado, automaticamente se creará." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MU0-n3-6Pf">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="69" id="g9m-1E-p18"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89411764705882346" green="0.81176470588235294" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="MU0-n3-6Pf" firstAttribute="top" secondItem="ueu-hv-QhA" secondAttribute="top" constant="3" id="53Z-LN-ByK"/>
+                                    <constraint firstItem="MU0-n3-6Pf" firstAttribute="leading" secondItem="ueu-hv-QhA" secondAttribute="leading" constant="8" id="Zsc-zx-nsE"/>
+                                    <constraint firstAttribute="trailing" secondItem="MU0-n3-6Pf" secondAttribute="trailing" constant="8" id="acZ-eL-OZO"/>
+                                    <constraint firstAttribute="bottom" secondItem="MU0-n3-6Pf" secondAttribute="bottom" constant="2" id="lpT-0Q-1Xe"/>
+                                    <constraint firstAttribute="height" constant="74" id="nc2-Ee-TqN"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo Electronico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfa-NL-eut" customClass="SexyTextField" customModule="FacebookPirata" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="weC-aE-Hx7"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBo-1Z-mrN" customClass="SexyTextField" customModule="FacebookPirata" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3st-0G-ELm"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADe-f9-WWo" customClass="LoginButton" customModule="FacebookPirata" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.6705882352941176" green="0.81568627450980391" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="K3z-NY-usa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Iniciar Sesión">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="bntLoginEmail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yk8-kJ-lye"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpM-xY-xAz">
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4l6-io-lYC"/>
+                                    <constraint firstAttribute="height" constant="100" id="gRL-0w-Gp5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" backgroundImage="fb-art">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFBLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qn9-hi-Stu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DBo-1Z-mrN" firstAttribute="top" secondItem="tfa-NL-eut" secondAttribute="bottom" constant="30" id="3k6-Qs-MC1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ueu-hv-QhA" secondAttribute="bottom" id="5Wd-fg-V8H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vpM-xY-xAz" secondAttribute="trailing" constant="122" id="F1w-JF-25g"/>
+                            <constraint firstItem="qQq-TW-UBb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GKq-jV-fF1"/>
+                            <constraint firstAttribute="trailing" secondItem="ueu-hv-QhA" secondAttribute="trailing" id="Gye-5f-8BF"/>
+                            <constraint firstItem="tfa-NL-eut" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HPh-Pf-efw"/>
+                            <constraint firstItem="DBo-1Z-mrN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Rlx-zx-EgH"/>
+                            <constraint firstItem="ADe-f9-WWo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UK0-gJ-JfR"/>
+                            <constraint firstItem="ueu-hv-QhA" firstAttribute="top" secondItem="SpI-67-4Ce" secondAttribute="bottom" id="VKM-hK-gkz"/>
+                            <constraint firstAttribute="trailing" secondItem="qQq-TW-UBb" secondAttribute="trailing" id="aqa-rV-KTk"/>
+                            <constraint firstItem="tfa-NL-eut" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bt9-DI-IBB"/>
+                            <constraint firstItem="qQq-TW-UBb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="c1y-gu-G82"/>
+                            <constraint firstItem="tfa-NL-eut" firstAttribute="top" secondItem="qQq-TW-UBb" secondAttribute="bottom" constant="70" id="eKc-HY-KcC"/>
+                            <constraint firstItem="ueu-hv-QhA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ja9-n9-7LF"/>
+                            <constraint firstItem="ADe-f9-WWo" firstAttribute="top" secondItem="DBo-1Z-mrN" secondAttribute="bottom" constant="41" id="jgn-Kz-ySE"/>
+                            <constraint firstItem="vpM-xY-xAz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="121" id="pA5-g5-BRD"/>
+                            <constraint firstItem="SpI-67-4Ce" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pbV-Oq-WXK"/>
+                            <constraint firstItem="DBo-1Z-mrN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pvj-uL-j4P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ADe-f9-WWo" secondAttribute="trailing" id="qf3-2G-3fv"/>
+                            <constraint firstItem="SpI-67-4Ce" firstAttribute="top" secondItem="qQq-TW-UBb" secondAttribute="bottom" id="svx-DO-Aef"/>
+                            <constraint firstItem="vpM-xY-xAz" firstAttribute="top" secondItem="ADe-f9-WWo" secondAttribute="bottom" constant="8" id="vps-vT-yJ0"/>
+                            <constraint firstAttribute="trailing" secondItem="SpI-67-4Ce" secondAttribute="trailing" id="wXi-Q6-Tfd"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="koG-Zk-P7P"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="txtPass" destination="DBo-1Z-mrN" id="sN3-qA-Wq7"/>
+                        <outlet property="txtUsr" destination="tfa-NL-eut" id="Lt8-yi-UJC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="756" y="-599.55022488755628"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kvZ-G3-l9N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U9S-AB-NTf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cx1-ru-5MP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jXt-yB-LAw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2N-eJ-8we" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66.400000000000006" y="-569.86506746626696"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="city-background-4" width="1920" height="1080"/>
+        <image name="fb-art" width="250" height="250"/>
+        <image name="telemetria-telstock-logo" width="1188" height="600"/>
+    </resources>
 </document>

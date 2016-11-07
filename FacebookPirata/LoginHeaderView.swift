@@ -10,12 +10,10 @@ import UIKit
 
 class LoginHeaderView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    override func awakeFromNib() {
+        layer.shadowColor = shadowColor.cgColor
+        layer.shadowOffset = CGSize(width: 5, height: 5)
+        layer.shadowOpacity =  1.0
     }
-    */
 
 }

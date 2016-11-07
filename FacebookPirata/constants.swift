@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import UIKit
+
+
+let shadowValue: CGFloat = 125.0/255.0
+let shadowColor = UIColor(red: shadowValue, green: shadowValue, blue: shadowValue, alpha: 0.6) 
+

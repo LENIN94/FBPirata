@@ -1,0 +1,6 @@
+framework module GoogleToolboxForMac {
+  umbrella header "GoogleToolboxForMac-DebugUtils-Defines-Logger-NSData+zlib-NSDictionary+URLArguments-NSString+URLArguments-umbrella.h"
+
+  export *
+  module * { export * }
+}

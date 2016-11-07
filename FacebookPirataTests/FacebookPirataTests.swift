@@ -8,6 +8,8 @@
 
 import XCTest
 @testable import FacebookPirata
+import FirebaseAuth
+import FirebaseCore
 
 class FacebookPirataTests: XCTestCase {
     
