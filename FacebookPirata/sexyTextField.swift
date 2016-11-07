@@ -15,7 +15,7 @@ class SexyTextField: UITextField{
     override func awakeFromNib() {
         layer.borderColor = shadowColor.cgColor
         layer.borderWidth = 1
-        layer.cornerRadius = 6
+        layer.cornerRadius = 25
         
         
        

@@ -15,10 +15,10 @@ class LoginButton: UIButton {
         
         
         layer.backgroundColor = UIColor(red: 171/255.0, green: 208/255.0, blue: 83/255.0, alpha: 1).cgColor
-        layer.cornerRadius = 5
+        layer.cornerRadius = 25
         layer.shadowColor = shadowColor.cgColor
         layer.shadowOffset = CGSize(width: 5, height: 5)
-        layer.shadowRadius = 5
+        layer.shadowRadius = 25
         tintColor = UIColor.white
     }
 
