@@ -85,11 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher/GTMSessionFetcher.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac-DebugUtils-Defines-Logger-NSData+zlib-NSDictionary+URLArguments-NSString+URLArguments/GoogleToolboxForMac.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac-615f275e/GoogleToolboxForMac.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftKeychainWrapper/SwiftKeychainWrapper.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher/GTMSessionFetcher.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac-DebugUtils-Defines-Logger-NSData+zlib-NSDictionary+URLArguments-NSString+URLArguments/GoogleToolboxForMac.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac-615f275e/GoogleToolboxForMac.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftKeychainWrapper/SwiftKeychainWrapper.framework"
 fi

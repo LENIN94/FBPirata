@@ -16,3 +16,4 @@ let pass_not_long = 17026
 let acount_already_in_use =  17007
 
 let invalid_pass_us =  17009
+let KEY_UID = "uid"

@@ -11,7 +11,8 @@ pod 'Firebase/Messaging'
 pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'SwiftKeychainWrapper'
-
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
   target 'FacebookPirataTests' do
     inherit! :search_paths
     pod 'Firebase'
